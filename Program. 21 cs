@@ -1,0 +1,23 @@
+﻿// напишите программу, кот.принимает на вход координаты 2 точек и находит расстояние м\у ними в 3 D
+double Distance (double xa, double xb, double ya, double yb, double ca, double cb)
+{
+    double lenth = Math.Sqrt((xb-xa)*(xb-xa)+(yb-ya)*(yb-ya)+(cb-ca)*(cb-ca));
+    return lenth;
+}
+
+Console.Write("Введите значение координаты Х точки А: ");
+int xa = Convert.ToInt32(Console.ReadLine());
+Console.Write("Введите значение координаты Y точки А: ");
+int ya = Convert.ToInt32(Console.ReadLine());
+Console.Write("Введите значение координаты C точки А: ");
+int ca = Convert.ToInt32(Console.ReadLine());
+
+Console.Write("Введите значение координаты Х точки B: ");
+int xb = Convert.ToInt32(Console.ReadLine());
+Console.Write("Введите значение координаты Y точки B: ");
+int yb = Convert.ToInt32(Console.ReadLine());
+Console.Write("Введите значение координаты C точки B: ");
+int cb = Convert.ToInt32(Console.ReadLine());
+
+double lenth = Distance(xa, xb, ya, yb, ca, cb);
+Console.WriteLine($"Расcтояние между A и B = {lenth}");
